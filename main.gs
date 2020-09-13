@@ -59,57 +59,44 @@ function getValue(){
   var rowNum = my_cell.getRow();
   console.log(rowNum);
   if (notifySheet.getRange('D' + rowNum).getValue() == "アイコン用イラスト"){
-    var mail = notifySheet.getRange('B' + rowNum).getValue();
-    var name = notifySheet.getRange('C' + rowNum).getValue();
-    var menu = notifySheet.getRange('D' + rowNum).getValue();
-    var contract = notifySheet.getRange('E' + rowNum).getValue();
-    var personNum = notifySheet.getRange('F' + rowNum).getValue();
-    var size = notifySheet.getRange('G' + rowNum).getValue();
-    var pngjpg = notifySheet.getRange('H' + rowNum).getValue();
-    var background = notifySheet.getRange('I' + rowNum).getValue();
-    var bgImage = notifySheet.getRange('J' + rowNum).getValue();
-    var illust = notifySheet.getRange('K' + rowNum).getValue();
-    var illustImage = notifySheet.getRange('L' + rowNum).getValue();
-    var angle = notifySheet.getRange('M' + rowNum).getValue();
-    var angleImage = notifySheet.getRange('N' + rowNum).getValue();
-    var pause = notifySheet.getRange('O' + rowNum).getValue();
-    var pauseImage = notifySheet.getRange('P' + rowNum).getValue();
-    var description = notifySheet.getRange('Q' + rowNum).getValue();
+    var customer = {
+      mail: notifySheet.getRange('B' + rowNum).getValue(),
+      name: notifySheet.getRange('C' + rowNum).getValue(),
+      menu: notifySheet.getRange('D' + rowNum).getValue(),
+      contract: notifySheet.getRange('E' + rowNum).getValue(),
+      personNum: notifySheet.getRange('F' + rowNum).getValue(),
+      size: notifySheet.getRange('G' + rowNum).getValue(),
+      pngjpg: notifySheet.getRange('H' + rowNum).getValue(),
+      background: notifySheet.getRange('I' + rowNum).getValue(),
+      bgImage: notifySheet.getRange('J' + rowNum).getValue(),
+      illust: notifySheet.getRange('K' + rowNum).getValue(),
+      illustImage: notifySheet.getRange('L' + rowNum).getValue(),
+      angle: notifySheet.getRange('M' + rowNum).getValue(),
+      angleImage: notifySheet.getRange('N' + rowNum).getValue(),
+      pause: notifySheet.getRange('O' + rowNum).getValue(),
+      pauseImage: notifySheet.getRange('P' + rowNum).getValue(),
+      description: notifySheet.getRange('Q' + rowNum).getValue()
+    };
   }else{
-    var mail = notifySheet.getRange('B' + rowNum).getValue();
-    var name = notifySheet.getRange('C' + rowNum).getValue();
-    var menu = notifySheet.getRange('D' + rowNum).getValue();
-    var contract = notifySheet.getRange('E' + rowNum).getValue();
-    var personNum = notifySheet.getRange('R' + rowNum).getValue();
-    var size = notifySheet.getRange('S' + rowNum).getValue();
-    var pngjpg = notifySheet.getRange('T' + rowNum).getValue();
-    var background = notifySheet.getRange('U' + rowNum).getValue();
-    var bgImage = notifySheet.getRange('V' + rowNum).getValue();
-    var illust = notifySheet.getRange('W' + rowNum).getValue();
-    var illustImage = notifySheet.getRange('X' + rowNum).getValue();
-    var angle = notifySheet.getRange('Y' + rowNum).getValue();
-    var angleImage = notifySheet.getRange('Z' + rowNum).getValue();
-    var pause = notifySheet.getRange('AA' + rowNum).getValue();
-    var pauseImage = notifySheet.getRange('AB' + rowNum).getValue();
-    var description = notifySheet.getRange('AC' + rowNum).getValue();
+    var customer = {
+      mail: notifySheet.getRange('B' + rowNum).getValue(),
+      name: notifySheet.getRange('C' + rowNum).getValue(),
+      menu: notifySheet.getRange('D' + rowNum).getValue(),
+      contract: notifySheet.getRange('E' + rowNum).getValue(),
+      personNum: notifySheet.getRange('R' + rowNum).getValue(),
+      size: notifySheet.getRange('S' + rowNum).getValue(),
+      pngjpg: notifySheet.getRange('T' + rowNum).getValue(),
+      background: notifySheet.getRange('U' + rowNum).getValue(),
+      bgImage: notifySheet.getRange('V' + rowNum).getValue(),
+      illust:  notifySheet.getRange('W' + rowNum).getValue(),
+      illustImage: notifySheet.getRange('X' + rowNum).getValue(),
+      angle: notifySheet.getRange('Y' + rowNum).getValue(),
+      angleImage: notifySheet.getRange('Z' + rowNum).getValue(),
+      pause: notifySheet.getRange('AA' + rowNum).getValue(),
+      pauseImage: notifySheet.getRange('AB' + rowNum).getValue(),
+      description: notifySheet.getRange('AC' + rowNum).getValue()
+    }
   }
-  var customer = {
-    mail,
-    name,
-    menu,
-    contract,
-    personNum,
-    size,
-    pngjpg,
-    background,
-    bgImage,
-    angle,
-    angleImage,
-    pause,
-    pauseImage,
-    description
-  }
-  
   console.log(customer);
   addCard(customer);
   mailToSouun3(customer);
